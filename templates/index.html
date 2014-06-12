@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>3DS -> imgur</title>
+</head>
+<body>
+{% if error %}
+An error occurred! Try again.<br />
+{{ error }}
+{% endif %}
+{% if URLs %}
+<h1>Upload successful: <a href='{{ URLs }}' target='_new'>{{ URLs }}</a><br />
+Filename in lowercase: {{ Lower }}<br />
+QR Code:<br />
+<img src='http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl={{ URLs }}' /><br />
+</h1>
+{% endif %}
+<h1>Select image to upload:</h1>
+<form action='' enctype='multipart/form-data' method='POST'>
+	<input type='file' name='image' style='font-size:50px'  /><br />
+	<input type='submit' value='Upload!' style='font-size:50px;' />
+</form>
+<sub>Send feedback to Zet</sub>
+</body>
+</html>

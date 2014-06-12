@@ -1,0 +1,10 @@
+3ds-imgur
+
+Simple anonymous imgur uploader with an extra large UI for 3DS browsers
+
+Requirements:
+
+* python 2.6+
+* Flask
+* pyimgur
+* requests
